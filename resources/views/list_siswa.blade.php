@@ -39,3 +39,6 @@
         @endforeach
   </tbody>
 </table>
+<a href="{{ route('add-siswa') }}">
+<button type="button" class="btn btn-primary">Add New</button>
+</a>

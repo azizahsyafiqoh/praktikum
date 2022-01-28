@@ -1,8 +1,8 @@
 @include('inc.navbar')
 <center>
 
-    <h1>{{ $biodata }}</h1>
-    <h2>{{ $salam2 }}</h2>
+        <h1>{{ $biodata }}</h1>
+        <h2>{{ $salam2 }}</h2>
 
 </center>
 

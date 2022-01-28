@@ -15,9 +15,19 @@ use App\Http\Controllers\BiodataController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/list', function () {
+    return view('list_siswa');
+});
 
-
+Route::get('/form', function () {
+    return view('form');
+});
 
 Route::get('/home', [HomeController::class,'index'])->name('home');
 Route::get('/biodata', [BioController::class, 'index'])->name('biodata');
-route::get('/list_siswa', [BiodataController::class, 'index']);
+Route::get('/list_siswa', [BiodataController::class, 'index'])->name('list_siswa');
+Route::get('/form', [BiodataController::class, 'create'])->name('add-siswa');
+Route::post('/store_siswa', [BiodataController::class, 'store']);
+
+Route::get('/post', [PostController::class, 'index']);
+/*
