@@ -52,7 +52,7 @@ class BiodataController extends Controller
       $bio->jk = $request->jk;
       $bio->hoby = $request->hobi;
       $bio->agama = $request->alamat;
-      $bio->telpon = $request->telepon;
+      $bio->telp = $request->telepon;
       $bio->email = $request->email;
 
       $bio->save();
@@ -78,7 +78,13 @@ class BiodataController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data = [
+            'title' => 'Edit Biodata',
+            'method' => 'PUT',
+            'route' => route('update-siswa', $id),
+            'bio' => Biodata::where('id', $id)->first(),
+        ];
+        return view('edit_siswa', $data);
     }
 
     /**

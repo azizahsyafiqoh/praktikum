@@ -42,3 +42,5 @@
 <a href="{{ route('add-siswa') }}">
 <button type="button" class="btn btn-primary">Add New</button>
 </a>
+<a button type="button" class="btn btn-warning" href="{{ route('edit-siswa',$siswa->id) }}">Edit</button></a>
+

@@ -13,16 +13,16 @@
   <body>
     @include('inc.navbar')
     <h1>Tambah Siswa</h1>
-    <form>
+    <form post method="post" action="/store_siswa">
         @csrf
         <div class="form-group">
             <label for="inputAddress">Nama</label>
-            <input type="text" class="form-control" id="inputAddress" placeholder="Nama Lengkap">
+            <input type="text" name="nama" class="form-control"  id="inputAddress" placeholder="Nama Lengkap">
           </div>
           <div class="form-row">
             <div class="form-group col-md-6">
-              <label for="inputEmail4">Tempat Lahir</label>
-              <input type="email" name="lahir" class="form-control" id="inputAddress" placeholder="Tempat Lahir">
+              <label for="inputAdrress">Tempat Lahir</label>
+              <input type="text" name="lahir" class="form-control" id="inputAddress" placeholder="Tempat Lahir">
             </div>
             <div class="form-group col-md-6">
               <label for="inputState">Tanggal Lahir</label>
